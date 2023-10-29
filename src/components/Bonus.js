@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 
 
-function Bonus() {
-  const [bonus, setBonus] = useState({ points: 0 });
-  const increment = () => {
-    setBonus({points : bonus.points + 1});
-  }
+function Bonus({incrementBonus, bonus}) {
+  
+
   return (
       <div className="card">
         <div className="container">
@@ -13,7 +11,7 @@ function Bonus() {
             <b>Bonus Component</b>
           </h4>
           <h3>Total Point : ${bonus.points}</h3>
-          <button onClick={increment}>Increment + </button>
+          <button onClick={incrementBonus}>Increment + </button>
         </div>
       </div>
   )
